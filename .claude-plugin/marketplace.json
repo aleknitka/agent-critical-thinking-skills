@@ -1,0 +1,30 @@
+{
+  "name": "agent-critical-thinking-skills",
+  "owner": {
+    "name": "alek"
+  },
+  "metadata": {
+    "description": "Critical-thinking micro-skills for AI harnesses — evidence appraisal, argument mapping, bias checks, Bayesian updating, and decision discipline. Complements agent-creative-thinking-skills. 8 planned methods with a router."
+  },
+  "plugins": [
+    {
+      "name": "critical-thinking-skills",
+      "source": "./plugins/critical-thinking-skills",
+      "description": "Critical-thinking skills for agents: evidence, argument, bias, Bayesian, Socratic, steelman, calibration, and decision (8 planned) plus a router and shared workspace.",
+      "version": "0.1.0",
+      "category": "reasoning",
+      "keywords": [
+        "critical-thinking",
+        "evidence-appraisal",
+        "argument-mapping",
+        "fallacy-bias",
+        "bayesian",
+        "socratic",
+        "steelman",
+        "calibration",
+        "decision-analysis",
+        "reasoning"
+      ]
+    }
+  ]
+}

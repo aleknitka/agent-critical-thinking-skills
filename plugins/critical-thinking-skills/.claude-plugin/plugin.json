@@ -1,0 +1,20 @@
+{
+  "name": "critical-thinking-skills",
+  "version": "0.1.0",
+  "description": "Critical-thinking skills for agents: evidence, argument, bias, Bayesian, Socratic, steelman, calibration, and decision (8 planned) plus a router and shared workspace.",
+  "author": {
+    "name": "alek"
+  },
+  "keywords": [
+    "critical-thinking",
+    "evidence-appraisal",
+    "argument-mapping",
+    "fallacy-bias",
+    "bayesian",
+    "socratic",
+    "steelman",
+    "calibration",
+    "decision-analysis",
+    "reasoning"
+  ]
+}
