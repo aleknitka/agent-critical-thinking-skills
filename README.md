@@ -4,7 +4,7 @@
 
 > **Make any AI a sharper judge.** 8 evaluative micro-methods + a router — with a 5th bucket `sharper judgment` — that turn "is this credible / does this follow / what are we missing" into a scorecard, a map, a bias scan, or a priced bet — plus the probe that proves it.
 
-![Launch film — 8 + router in 12 seconds](assets/launch.gif)
+![Launch film — 8 + router in 42 seconds](assets/launch.gif)
 
 No prompt engineering. Works with Claude Code, Codex, and any harness that loads skills. Every method: one sharp instruction → a concrete artifact → a tiny experiment.
 
@@ -165,7 +165,7 @@ uv run python plugins/critical-thinking-skills/skills/fallacy-bias-spotting/scri
 - **Status:** actively maintained, `0.9.0` — breaking changes bump minor while pre-1.0; every skill ships with `references/provenance.md`.
 - **Licence:** MIT (see `LICENSE`).
 - **Requirements:** `uv` (or Python ≥3.13) for `scripts/*.py` (`uv sync` once, then `uv run python …`); Claude Code, Codex, OMP or Pi for `SKILL.md` auto-loading; workspace needs any modern browser, no build, no deps.
-- **Releases:** [`CHANGELOG.md`](CHANGELOG.md) — `scripts/validate.py` gates every release (`OK` on 9 skills, 5-bucket router). Launch film: `assets/launch.gif` (960×540, 12s, 1.9M) + HyperFrames source in `.hyperframes-launch/index.html`.
+- **Releases:** [`CHANGELOG.md`](CHANGELOG.md) — `scripts/validate.py` gates every release (`OK` on 9 skills, 5-bucket router). Launch film: `assets/launch.gif` (960×540, 42s, 2.0M, ~7s/slide) + HyperFrames source in `.hyperframes-launch/index.html`.
 
 ---
 
