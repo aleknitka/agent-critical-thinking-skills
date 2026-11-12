@@ -1,7 +1,7 @@
 [project]
 name = "agent-critical-thinking-skills"
-version = "0.1.0"
-description = "Critical-thinking micro-skills for AI harnesses — evidence appraisal, argument mapping, bias checks, Bayesian updating, Socratic, steelman, calibration, and decision (8 planned)"
+version = "0.9.0"
+description = "Critical-thinking micro-skills for AI harnesses — 8 evaluative methods + a router (sharper judgment) — evidence, argument, bias, Bayesian, Socratic, steelman, calibration, decision"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []

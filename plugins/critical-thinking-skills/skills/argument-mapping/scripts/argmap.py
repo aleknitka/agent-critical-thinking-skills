@@ -27,7 +27,7 @@ QUALIFIER_RE = re.compile(
     r"\b(probably|likely|unlikely|possibly|presumably|plausibly|perhaps|"
     r"certainly|definitely|clearly|apparently|in most cases|generally|"
     r"may|might|must|should)\b", re.I)
-WARRANT_RE = re.compile(r"\b(?:all|every|any|whenever|always|never)\b"
+WARRANT_RE = re.compile(r"\b(?:all|every|any|whenever|always|never|no)\b"
                         r"|\bif\b.*\bthen\b", re.I)
 BACKING_RE = re.compile(
     r"\b(?:according to|studies show|research shows|evidence suggests|"
@@ -35,8 +35,8 @@ BACKING_RE = re.compile(
 GROUNDS_RE = re.compile(r"\b(?:because|since|given that|as|for|evidence|"
                         r"data|observed|observed that|studies|research)\b", re.I)
 CLAIM_CUE_RE = re.compile(
-    r"\b(?:we should|i conclude|the answer is|the point is|"
-    r"what matters is|we must)\b", re.I)
+    r"\b(?:we should|i conclude|the answer is|clearly|obviously|must|"
+    r"the point is|what matters is)\b", re.I)
 DEDUCTIVE_RE = re.compile(r"\b(?:all|every|no|none|never|must|certainly)\b", re.I)
 ABDUCTIVE_RE = re.compile(
     r"\b(?:best explanation|explains|explanation|consistent with|"
@@ -118,22 +118,13 @@ def infer(text: str, aggressive: bool) -> dict:
     if claim_idx is None and aggressive and sentences:
         # No explicit marker: use a claim cue, else the last sentence.
         for i, sentence in enumerate(sentences):
-            if CLAIM_CUE_RE.search(sentence):
+            if CLAIM_CUE_RE.search(sentence) and i > 0:
                 claim, claim_idx = sentence, i
                 break
         if claim_idx is None:
             claim, claim_idx = sentences[-1], len(sentences) - 1
     if claim_idx is None:
-        # No conclusion marker and no aggressive inference: treat the whole
-        # passage as the claim and report the missing structure honestly.
-        return {
-            "claim": text.strip(),
-            "grounds": [],
-            "warrant": "",
-            "backing": "",
-            "qualifier": first_match(QUALIFIER_RE, text) or "",
-            "rebuttal": "",
-        }
+        claim = text.strip()
 
     for i, sentence in enumerate(sentences):
         if i < claim_idx:
@@ -198,15 +189,14 @@ def build_map(slots: dict, aggressive: bool) -> dict:
     rebuttal = pick("rebuttal")
 
     arg_type = detect_type(claim, grounds, warrant)
+    missing = [name for name, value in (
+        ("claim", claim), ("grounds", grounds), ("warrant", warrant),
+    ) if not value]
 
     warrant_source = "stated" if warrant else "missing"
     if not warrant and claim and grounds and arg_type in SUPPLIED_WARRANTS:
         warrant = SUPPLIED_WARRANTS[arg_type]
         warrant_source = "supplied"
-
-    missing = [name for name, value in (
-        ("claim", claim), ("grounds", grounds), ("warrant", warrant),
-    ) if not value]
 
     if not claim:
         verdict, detail = "gap", "No identifiable claim."
@@ -286,8 +276,8 @@ def main(argv=None) -> int:
     text = args.text
     if text == "-":
         text = sys.stdin.read()
-    if text is None and not any((args.claim, args.grounds, args.warrant, args.backing,
-                                 args.qualifier, args.rebuttal)):
+    if not text and not any((args.claim, args.grounds, args.warrant, args.backing,
+                             args.qualifier, args.rebuttal)):
         p.error("provide --text or at least one explicit slot")
 
     slots = {

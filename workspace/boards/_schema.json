@@ -37,7 +37,16 @@
         "nominal-group",
         "lotus-blossom",
         "dot-voting",
-        "board-game"
+        "board-game",
+        "evidence-appraisal",
+        "argument-mapping",
+        "fallacy-bias",
+        "bayesian-updating",
+        "socratic-elenchus",
+        "steelman-red-team",
+        "calibration-forecasting",
+        "decision-analysis",
+        "critical-router"
       ],
       "default": "blank"
     },

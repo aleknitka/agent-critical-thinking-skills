@@ -112,8 +112,8 @@ them into one LR rather than multiplying.
 ```
 Prior 0.10 (base rate for class X, source: ...)
 Evidence: positive test; P(E|H)=0.90, P(E|¬H)=0.20 → LR 4.5
-Prior odds 0.10/0.90 = 0.111; posterior odds 0.111 × 4.5 = 0.50 → P 0.33
-Base-rate check: naive LR/(1+LR) = 0.82 → prior matters by 49 pp
+Posterior odds 0.045 / 0.955 = 0.047 → P 0.33?  (compute, do not guess)
+Base-rate check: naive LR/(1+LR) = 0.82 → prior matters
 Decision threshold: act at P > 0.60 → not met
 Next probe: confirmatory test (LR ≈ 10) at cost C; expected shift +0.5 odds
 ```

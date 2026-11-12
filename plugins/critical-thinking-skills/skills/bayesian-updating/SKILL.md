@@ -38,7 +38,7 @@ or a reference class first.
 
 Produce this table, not a paragraph:
 
-| Prior (source) | Evidence | LR (P(E|H)/P(E|¬H)) | Posterior | Base-rate flag | Next probe worth it? |
+| Prior (source) | Evidence | LR (P(E\|H)/P(E\|¬H)) | Posterior | Base-rate flag | Next probe worth it? |
 |---|---|---|---|---|---|
 | 0.10 (base rate of X in class) | positive test, sens .9 / spec .8 | 4.5 | 0.33 | yes — naive 0.82 overstates by 49 pp | repeat test (LR ≈ 5) only if it changes the action |
 

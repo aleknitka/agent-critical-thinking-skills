@@ -1,59 +1,121 @@
-# Toulmin Model — Six Slots
+# Toulmin, Walton, and Ennis: the machinery behind the map
 
-From Toulmin (1958) *The Uses of Argument*; modernized by Walton (2008) and Ennis.
+## Toulmin's model (1958)
 
-| Slot | Question it answers | Marks in text |
+Stephen Toulmin, *The Uses of Argument* (Cambridge, 1958), rejected the idea that all
+good arguments are formal syllogisms. Everyday reasoning is field-dependent: what counts
+as a good warrant in law differs from what counts in medicine. His layout has six slots.
+
+| Slot | Definition | Test question |
 |---|---|---|
-| **Claim** | What is being sold? | "therefore", "so", "hence", "should" |
-| **Grounds** | What facts/reasons are offered? | data, examples, observations, premises |
-| **Warrant** | What bridge rule turns grounds into claim? | often unstated — "if grounds then claim" |
-| **Backing** | Why is the warrant credible? | law, mechanism, study, principle |
-| **Qualifier** | How strongly is the claim held? | "probably", "certainly", "in most cases", absence = "always" |
-| **Rebuttal** | When does it fail? | "unless", "except when", "if not" |
+| **Claim** (C) | The conclusion the argument asks you to accept. | What is being asserted? |
+| **Grounds** (G) | The facts, data, or evidence offered in support. | What is given? |
+| **Warrant** (W) | The general rule licensing the step from G to C. Usually implicit. | What must be true for G to count as support for C? |
+| **Backing** (B) | Support for the warrant itself — field-specific evidence or authority. | Why should we accept the rule? |
+| **Qualifier** (Q) | The degree of force the claim carries: *certainly, presumably, probably, in most cases*. | How strongly does C follow? |
+| **Rebuttal** (R) | Conditions that would defeat or restrict the claim. | When would C not hold? |
 
-## How to use
+Toulmin's key move: the warrant is not another premise in the same chain. It is a
+**bridge rule**, and it is where most bad arguments hide, because prose leaves it
+unstated and the reader silently supplies a version that happens to be true.
 
-1. Copy one sentence per slot. If a slot is empty, write "unstated".
-2. The warrant is the test: state it as "if G then C" and ask whether you believe it. Most invalid arguments have a false or overbroad warrant, not false grounds.
-3. Validity tag follows from warrant + backing:
-   - **Deductive:** premises guarantee the conclusion? valid / invalid (+ counterexample).
-   - **Inductive:** premises make it probable? strong / weak (sample size, representativeness).
-   - **Abductive:** is this the best explanation among rivals? best / plausible / weak.
+Note on terminology: Toulmin wrote "data" for grounds and "warrant" for the bridging
+rule; later writers say "grounds" and sometimes "bridge". The relationship
+$\text{G} \;\xrightarrow{\;W\;}\; \text{C}$ is the whole model in one line.
+
+## Walton's argument schemes (2008)
+
+Douglas Walton, *Informal Logic: A Pragmatic Approach* (2nd ed., 2008), supplies the
+missing taxonomy for **inductive and abductive** arguments. Where Toulmin gives a layout,
+Walton gives recurring schemes with critical questions:
+
+- *Argument from example*: "In this case X, property P held; therefore generally P."
+  Critical questions: Is the example representative? Are there counterexamples?
+- *Argument from expert opinion*: "E says P; E is an expert; therefore P." Questions:
+  Is E credible? Is E's claim within E's field? Is there dissent among experts?
+- *Argument from sign*: "Y is present; Y indicates X; therefore X." Questions: How
+  reliable is the sign? Are there defeating conditions?
+- *Argument from cause to effect*: "A occurred; A typically causes B; therefore B."
+  Questions: Is the causal link established? Are there intervening causes?
+- *Inference to the best explanation* (abduction): "H explains the observations better
+  than rivals; therefore H." Questions: Are rival hypotheses considered? Is H itself
+  plausible? Does H predict anything beyond the data?
+
+Walton's contribution to a map: the **scheme name plus its unanswered critical
+questions** is a more honest verdict than "valid/invalid", which only fits deduction.
+
+## Ennis's taxonomy (1987)
+
+Robert Ennis, "A Taxonomy of Critical Thinking Dispositions and Abilities" (in Baron &
+Sternberg, eds., *Teaching Thinking Skills*, 1987), supplies the evaluation checklist:
+
+1. **Argument analysis**: identify the conclusion; identify the reasons; identify
+   unstated assumptions.
+2. **Judging credibility**: of a source, of an observation, of an authority.
+3. **Deduction**: judge whether the conclusion follows necessarily.
+4. **Induction**: judge the strength of generalization and analogy.
+5. **Value judgment**: judge the soundness of value claims and definitions.
+
+Ennis's rule of thumb matches this skill: an argument is **sound** only if it is valid
+(or strong) *and* its premises are acceptable. Mapping answers the first half; premise
+credibility is a separate job (see `evidence-appraisal`).
 
 ## Worked examples
 
-### 1. Deductive (invalid)
+### 1. Deductive
 
-Text: "All birds fly. Penguins are birds. Therefore penguins fly."
+> "Every mammal is warm-blooded. Whales are mammals. So whales are warm-blooded."
 
-- Claim: penguins fly.
-- Grounds: all birds fly; penguins are birds.
-- Warrant: if all birds fly and X is a bird, X flies.
-- Backing: "birds fly" — false universal premise.
-- Qualifier: none → "always".
-- Rebuttal: flightless birds.
-- Verdict: **invalid — warrant false** (false universal). Counterexample: penguin.
+- Claim: whales are warm-blooded.
+- Grounds: every mammal is warm-blooded; whales are mammals.
+- Warrant: if every mammal is warm-blooded and whales are mammals, then whales are
+  warm-blooded. (Stated implicitly; here it is just the substitution rule.)
+- Backing: definition of "mammal" plus the biological premise.
+- Qualifier: certainly.
+- Rebuttal: none needed — the form is universally quantified.
+- **Verdict: valid** (and sound if the premises are true).
 
-### 2. Inductive (weak)
+The giveaway is the universal quantifier plus a term that falls under it. If either
+premise fails, the form stays valid but soundness collapses.
 
-Text: "This feature worked for 3 early adopters, so it will work for all users."
+### 2. Inductive
 
-- Claim: the feature will work for all users.
-- Grounds: 3 early adopters succeeded.
-- Warrant: what holds for 3 early adopters holds for all users.
-- Backing: none.
-- Qualifier: "will" (certainty).
-- Rebuttal: later adopters differ in intent, skill.
-- Verdict: **weak inductive — warrant overgeneralizes** (needs base rate, larger sample, backing). Gap: "early adopters represent the population".
+> "Our last three releases shipped late. So the next one probably will too."
 
-### 3. Abductive (plausible, not best)
+- Claim: the next release will probably ship late.
+- Grounds: the last three releases shipped late.
+- Warrant: past performance of a recurring process tends to predict its next run
+  (supplied, not stated).
+- Backing: none offered. Sample size is three, and the releases may not be comparable.
+- Qualifier: probably.
+- Rebuttal: unless the team changed staffing or scope, or the past delays had a
+  one-off cause.
+- **Verdict: weak** — a three-case sample with no stated comparability. Strong would
+  require a larger, representative base and a mechanism, not just repetition.
 
-Text: "Retention dropped after the redesign, so the redesign caused it."
+### 3. Abductive
 
-- Claim: redesign caused the retention drop.
-- Grounds: timing correlation.
-- Warrant: post hoc → causation (correlation implies cause).
-- Backing: none beyond sequence.
-- Qualifier: implied "therefore caused".
-- Rebuttal: seasonality, invite quality, cohort mix.
-- Verdict: **weak causal abduction — correlation ≠ causation**. Needs rival explanations tested; plausible but not best until alternatives eliminated.
+> "The server logs show a spike at 02:00 and the disk filled by 02:10. The nightly
+> backup must have run away."
+
+- Claim: the nightly backup caused the disk to fill.
+- Grounds: log spike at 02:00; disk full by 02:10; backups run nightly.
+- Warrant: the hypothesis that best explains the observations is the one to accept
+  (supplied).
+- Backing: the backup's timing and known disk consumption.
+- Qualifier: must (overclaimed — should be "probably" or "plausibly").
+- Rebuttal: a log rotation job, a runaway query, or an external upload could also
+  explain the spike.
+- **Verdict: plausible but overqualified** — the backup is a good candidate, but rival
+  explanations were not excluded. Ask what observation would discriminate between them.
+
+## Common mapping errors
+
+- **Charitable rewrite**: mapping a stronger argument than the one given, then refuting
+  it. Defeats the purpose and drifts into strawmanning.
+- **Warrant smuggling**: accepting an unstated warrant without writing it down. The
+  unstated version is exactly where the error lives.
+- **Type confusion**: treating an inductive argument as deductive and declaring it
+  "invalid". Inductive arguments are weak or strong, never valid.
+- **Premise/mapping conflation**: a valid map does not make the claim true. Say
+  "valid; premise P is what I doubt" rather than "valid, so true".

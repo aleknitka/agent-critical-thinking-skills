@@ -1,0 +1,68 @@
+{
+  "id": "critical-onboarding",
+  "title": "Critical onboarding — one claim, five lanes",
+  "template": "critical-router",
+  "lanes": [
+    { "id": "lane-1", "title": "Intake" },
+    { "id": "lane-2", "title": "Sharper judgment" },
+    { "id": "lane-3", "title": "Better question" },
+    { "id": "lane-4", "title": "Broader view" },
+    { "id": "lane-5", "title": "Stronger options" }
+  ],
+  "notes": [
+    {
+      "id": "n1",
+      "text": "Claim: onboarding lifts retention 20% (n=40, blog, 2019, surrogate) — should we bet the quarter?",
+      "laneId": "lane-1",
+      "color": "#ffe0b2",
+      "votes": 0,
+      "tag": "question",
+      "x": 24,
+      "y": 76
+    },
+    {
+      "id": "n2",
+      "text": "Score: tier=blog 1 → strength ~1.0 hypothesis · next probe: find RCT/prereg",
+      "laneId": "lane-2",
+      "color": "#ffeb3b",
+      "votes": 0,
+      "tag": "fact",
+      "x": 230,
+      "y": 76
+    },
+    {
+      "id": "n3",
+      "text": "Term 'lifts retention' — what counts as retention? define → operational",
+      "laneId": "lane-3",
+      "color": "#81d4fa",
+      "votes": 0,
+      "tag": "assumption",
+      "x": 436,
+      "y": 76
+    },
+    {
+      "id": "n4",
+      "text": "Steelman ¬P: lift is cohort noise; attack: survivorship + indirect metric",
+      "laneId": "lane-4",
+      "color": "#ef9a9a",
+      "votes": 0,
+      "tag": "speculation",
+      "x": 642,
+      "y": 76
+    },
+    {
+      "id": "n5",
+      "text": "Probe: holdout 1 cohort, <2pp lift at p>0.2 by 2026-12-31 to falsify",
+      "laneId": "lane-5",
+      "color": "#c8e6c9",
+      "votes": 0,
+      "tag": "action",
+      "x": 848,
+      "y": 76
+    }
+  ],
+  "drawings": [],
+  "createdAt": "2026-11-12T06:58:08.000Z",
+  "updatedAt": "2026-11-12T06:58:08.000Z",
+  "schema": "boards/_schema.json"
+}

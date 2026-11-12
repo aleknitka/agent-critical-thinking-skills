@@ -1,7 +1,7 @@
 {
   "name": "critical-thinking-skills",
-  "version": "0.1.0",
-  "description": "Critical-thinking skills for agents: evidence, argument, bias, Bayesian, Socratic, steelman, calibration, and decision (8 planned) plus a router and shared workspace.",
+  "version": "0.9.0",
+  "description": "Critical-thinking skills for agents: 8 evaluative methods + a router (sharper judgment) — evidence, argument, bias, Bayesian, Socratic, steelman, calibration, decision, with offline helpers and a shared workspace.",
   "author": {
     "name": "alek"
   },
@@ -15,6 +15,7 @@
     "steelman",
     "calibration",
     "decision-analysis",
-    "reasoning"
+    "reasoning",
+    "thinking-router"
   ]
 }

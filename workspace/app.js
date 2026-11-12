@@ -17,6 +17,7 @@ let timerInt = null, timerSec = 300, timerRunning = false;
 
 const TEMPLATES = {
   blank: { title: "Blank", lanes: ["Inbox"] },
+  // creative track
   "six-hats": { title: "Six Hats", lanes: ["White — facts","Red — feelings","Yellow — benefits","Black — caution","Green — creativity","Blue — synthesis"]},
   brainwriting: { title: "Brainwriting", lanes: ["P1","P2","P3"] },
   scamper: { title: "SCAMPER", lanes: ["S Substitute","C Combine","A Adapt","M Modify","P Put to other use","E Eliminate","R Reverse"]},
@@ -34,6 +35,16 @@ const TEMPLATES = {
   "lotus-blossom": { title: "Lotus Blossom", lanes: ["Centre","P1","P2","P3","P4","P5","P6","P7","P8"]},
   "dot-voting": { title: "Dot Voting + Impact–Effort", lanes: ["Dots N/3","Quick wins","Strategic","Fill-ins","Avoid","Keep/Pivot/Kill"]},
   "board-game": { title: "Board-Game Abstraction", lanes: ["Players","Resources","Board","Loop","Rules","Playtest ×3","Transfer"]},
+  // critical track — 5th bucket: sharper judgment
+  "evidence-appraisal": { title: "Evidence Appraisal", lanes: ["Claim","Source (tier, N)","Strength 1-5","Next probe"]},
+  "argument-mapping": { title: "Argument Mapping", lanes: ["Claim","Grounds","Warrant","Backing","Qualifier","Rebuttal"]},
+  "fallacy-bias": { title: "Fallacy & Bias", lanes: ["Draft","Hit","Maybe","De-bias","Revision"]},
+  "bayesian-updating": { title: "Bayesian Updating", lanes: ["Prior (base rate)","Evidence + LR","Posterior","Base-rate flag","Probe worth?"]},
+  "socratic-elenchus": { title: "Socratic Elenchus", lanes: ["Term","Initial definition","Counterexample","Revised","Operational"]},
+  "steelman-red-team": { title: "Steelman & Red-Team", lanes: ["Claim P","Steelman ¬P","Attacks ×5","Falsifier","Posteriors"]},
+  "calibration-forecasting": { title: "Calibration & Forecasting", lanes: ["Prediction (dated)","p","Resolves","Outcome","Brier"]},
+  "decision-analysis": { title: "Decision Analysis", lanes: ["Options","Outcomes × p × u","EV + ranking","Sensitivity","Recommendation"]},
+  "critical-router": { title: "Critical Router", lanes: ["Intake","Sharper judgment","Better question","Broader view","Stronger options"]},
 };
 
 const COLORS = { fact: "#ffeb3b", assumption: "#81d4fa", speculation: "#ef9a9a", action: "#c8e6c9", question: "#ffe0b2" };

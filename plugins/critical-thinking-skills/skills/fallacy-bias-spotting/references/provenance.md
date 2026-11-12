@@ -14,7 +14,7 @@ This skill is a screening procedure assembled from established work on argumenta
 
 ## Supporting references
 
-- Walton, D. (2008). *Informal Logic: A Pragmatic Approach* (2nd ed.). Cambridge University Press. — fallacies asdialogical failures rather than mere formal errors; supports "tag the move, not the person".
+- Walton, D. (2008). *Informal Logic: A Pragmatic Approach* (2nd ed.). Cambridge University Press. — fallacies as对话 failures rather than mere formal errors; supports "tag the move, not the person".
 - Nickerson, R. S. (1998). "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises." *Review of General Psychology*, 2(2), 175–220. — the confirmation-bias entry and the "consider the opposite" repair.
 - Kahneman, D., & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk." *Econometrica*, 47(2), 263–291. — loss aversion.
 - Klein, G. (2007). "Performing a Project Premortem." *Harvard Business Review*, 85(9), 18–19. — the pre-mortem move.
